@@ -1,0 +1,217 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: verdana;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+#container {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    position: relative;
+    width: 500px;
+    margin: 0 auto -24px;
+}
+
+#content {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+#footer, #push-footer {
+    height: 16px;
+    font-size: 10px;
+    text-align: center;
+}
+
+#footer {
+    position: relative;
+    z-index: 1;
+}
+
+#auth {
+    position: absolute;
+    right: 10px;
+    font-size: 10px;
+}
+
+ul, form {
+    margin: 0px;
+    padding: 0px;
+}
+
+form.add.list, form.add.item, ul.done.lists, form.popup, div.background, div.body {
+    display: none;
+}
+
+a.add.list, a.done.lists, div.manage, a.close, a.cancel {
+    font-size: 10px;
+}
+
+form.add.list input[type="text"], form.add.item input[type="text"] {
+    width: 300px;
+}
+
+ul.lists {
+    text-align: left;
+    list-style-type: none;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+ul.lists > li {
+    margin-bottom: 10px;
+}
+
+div.header span.count {
+    font-size: 10px;
+    color: gray;
+    padding-top: 2px;
+    display: block;
+    float: left;
+    text-align: right;
+    width: 15px;
+    height: 22px;
+}
+
+a.name {
+    font-weight: bold;
+    display: block;
+    margin-left: 20px;
+    // float: left;
+    // margin-left: 5px;
+}
+
+div.body {
+    margin-left: 20px;
+    // clear: both;
+}
+
+div.descr {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ul.items {
+    list-style-type: none;
+    padding: 0px;
+}
+
+ul.items input {
+    margin-right: 8px;
+}
+
+ul.open.items > li {
+    margin-top: 5px;
+}
+
+ul.done.items {
+    font-size: 10px;
+    color: gray;
+}
+
+div.manage a {
+    margin-right: 7px;
+}
+
+form.add.item, div.manage {
+    height: 24px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+form.add.item {
+    // margin-left: -10px;
+}
+
+form.popup {
+    position: fixed;
+    width: 500px;
+    top: 155px;
+    background: white;
+    border: 2px solid LightGray;
+    z-index: 2;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    text-align: left;
+}
+
+div.background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+form.popup label {
+    display: block;
+    font-size: 10px;
+    line-height: 15px;
+}
+
+#name, #descr {
+    width: 485px;
+    margin-bottom: 10px;
+}
+
+#descr {
+    height: 70px;
+}
+
+form.popup ul {
+    margin-top: 0px;
+    padding: 0px;
+}
+
+form.popup li {
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+form.popup ul input {
+    display: block;
+    float: left;
+    width: 445px;
+    margin-right: 5px;
+}
+
+a.delete.item, a.drag.item {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 16px;
+    margin-top: 2px;
+}
+
+a.delete.item {
+    background-image: url('delete.png');
+    margin-right: 5px;
+}
+
+a.drag.item {
+    background-image: url('drag.png');
+    cursor: move;
+}
+
+ul.dragging, ul.dragging * {
+    cursor: move;
+}
+
+form.popup div {
+    text-align: center;
+}

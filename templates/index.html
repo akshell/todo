@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+          "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Todo Lists</title>
+    <link rel="stylesheet" type="text/css" href="{% code 'static/main.css' %}">
+    <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="{% code 'static/client.min.js' %}">
+    </script>
+    <script type="text/javascript" src="{% code 'static/json2.min.js' %}">
+    </script>
+    <script type="text/javascript">
+      lists = {{ lists|safe }};
+    </script>
+  </head>
+  <body>
+    <div id="auth">
+      {% if user %}
+        {{ user }} <a href="{% url 'logout' %}">logout</a>
+      {% else %}
+        Please <a href="{% url 'login' path %}">log in</a> or
+        <a href="{% url 'signup' path %}">sign up</a>
+        to store your lists permanently
+      {% endif %}
+    </div>
+    <div id="container">
+      <div id="content">
+        <h2>Todo Lists</h2>
+        <a class="add list" href="#">Add list</a>
+        <form class="add list">
+          <input type="text">
+          <input type="submit" value="Add list">
+          <a class="cancel" href="#">Cancel</a>
+        </form>
+        <ul class="open lists"></ul>
+        <a class="done lists" href="#">
+          <span class="action">Show</span> done (<span class="count"></span>)
+        </a>
+        <ul class="done lists"></ul>
+      </div>
+      <div id="push-footer"></div>      
+    </div>
+    <div id="footer">
+      <a href="http://www.akshell.com/">Akshell</a>
+      |
+      <a href="http://www.akshell.com/about/terms/">Terms of Service</a>
+      |
+      <a href="http://www.akshell.com/about/privacy/">Privacy Policy</a>
+    </div>
+    <form class="popup">
+      <label for="name">Name</label>
+      <input id="name" type="text">
+      <label for="descr">Description</label>
+      <textarea id="descr"></textarea>
+      <label class="items">Items</label>
+      <ul></ul>
+      <div>
+        <input type="submit" value="Save">
+        <a class="cancel" href="#">Cancel</a>
+      </div>
+    </form>
+    <div class="background"></div>
+  </body>
+</html>
