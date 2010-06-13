@@ -47,6 +47,10 @@ ul, form {
     padding: 0px;
 }
 
+ul {
+    list-style-type: none;
+}
+
 form.add.list, form.add.item, ul.done.lists, form.popup, div.background, div.body {
     display: none;
 }
@@ -61,7 +65,6 @@ form.add.list input[type="text"], form.add.item input[type="text"] {
 
 ul.lists {
     text-align: left;
-    list-style-type: none;
     margin-top: 16px;
     margin-bottom: 16px;
 }
@@ -99,11 +102,6 @@ div.descr {
     line-height: 16px;
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-ul.items {
-    list-style-type: none;
-    padding: 0px;
 }
 
 ul.items input {
