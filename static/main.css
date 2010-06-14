@@ -23,6 +23,7 @@ body {
 #content {
     padding-top: 100px;
     padding-bottom: 40px;
+    text-align: left;
 }
 
 #footer, #push-footer {
